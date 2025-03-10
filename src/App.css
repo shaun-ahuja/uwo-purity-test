@@ -3,7 +3,32 @@ body {
   padding: 0;
   font-family: 'Times New Roman', Times, serif;
   background-color: #f5f0e5;
+
 }
+
+
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../public/uwoLogo.png');
+  background-repeat: repeat;
+  /* Make images smaller */
+  background-size: 80px 100px;
+  /* Reduced from previous size */
+  opacity: 0.1;
+  z-index: -1;
+  transform: rotate(-14deg) scale(1.2);
+  /* Increase spacing between shields */
+  background-position: 0 0;
+  /* Use this property to create more space between repeated images */
+  background-repeat: space space;
+}
+
 
 .purity-test-container {
   display: flex;
@@ -26,18 +51,6 @@ body {
   overflow: hidden;
 }
 
-/* Background pattern */
-.purity-test::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: "./uwoLogo.png";
-  opacity: 0.05;
-  pointer-events: none;
-}
 
 /* Header styles */
 .header {
