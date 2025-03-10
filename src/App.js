@@ -29,14 +29,6 @@ function PurityTest() {
     });
   };
 
-  // const calculateScore = () => {
-  //   const totalQuestions = questions.length;
-  //   const checkedCount = Object.values(checkedItems).filter(value => value).length;
-  //   const purityScore = Math.round(((totalQuestions - checkedCount) / totalQuestions) * 100);
-
-  //   // Navigate to results page with the score
-  //   navigate('/results', { state: { score: purityScore } });
-  // };
 
   const calculateScore = () => {
     // Count the number of checked items
@@ -137,7 +129,7 @@ function PurityTest() {
     'Applied to be a Soph but got rejected',
     'Kissed a Soph',
     'Kissed a residence Don',
-    'Have photos with Special Constables',
+    'Have a photo with a Special Constable',
     'Took a photo with CityBoyJJ at HOCO',
     'Slipped and fell on ice in public',
     'Been skating at the REC center',
@@ -201,23 +193,8 @@ function PurityTest() {
   );
 }
 
+
 // Results Page Component
-// function ResultsPage() {
-//   const navigate = useNavigate();
-//   const location = window.location;
-
-//   // Get score from the URL search params or use a default
-//   // In a real app, you would use useLocation from react-router-dom
-//   // This is a workaround for the artifact rendering
-//   const urlParams = new URLSearchParams(location.search);
-//   const scoreFromParams = urlParams.get('score');
-
-//   // Try to get score from state if available (this would work in a real app)
-//   const scoreFromState = location.state?.score;
-
-//   // Use the score from state or params, or default to 100
-//   const score = scoreFromState || scoreFromParams || 100;
-
 function ResultsPage() {
   const navigate = useNavigate();
 
@@ -276,7 +253,6 @@ function ResultsPage() {
     <div className="purity-test results-page">
       <div className="header">
         <h1>
-          {/* <span className="official">The Official</span> University of Western Ontario Purity Test */}
           <img className="center-image" src="/uwoPurityTest.png" alt="University of Western Ontario Purity Test" />
         </h1>
       </div>

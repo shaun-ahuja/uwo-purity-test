@@ -3,10 +3,7 @@ body {
   padding: 0;
   font-family: 'Times New Roman', Times, serif;
   background-color: #f5f0e5;
-
 }
-
-
 
 body::before {
   content: "";
@@ -17,18 +14,13 @@ body::before {
   height: 100%;
   background-image: url('../public/uwoLogo.png');
   background-repeat: repeat;
-  /* Make images smaller */
   background-size: 80px 100px;
-  /* Reduced from previous size */
   opacity: 0.1;
   z-index: -1;
   transform: rotate(-14deg) scale(1.2);
-  /* Increase spacing between shields */
   background-position: 0 0;
-  /* Use this property to create more space between repeated images */
   background-repeat: space space;
 }
-
 
 .purity-test-container {
   display: flex;
@@ -42,7 +34,6 @@ body::before {
   position: relative;
   max-width: 800px;
   width: 100%;
-  /* background-color: #f9f3e3; */
   background-color: #fef6e4;
   border: 2px solid rgba(146, 111, 56, 0.2);
   border-radius: 8px;
@@ -51,8 +42,6 @@ body::before {
   overflow: hidden;
 }
 
-
-/* Header styles */
 .header {
   position: relative;
   text-align: center;
@@ -92,7 +81,6 @@ body::before {
   margin-top: 10px;
 }
 
-/* Description styles */
 .description {
   margin-bottom: 30px;
   text-align: center;
@@ -107,7 +95,6 @@ body::before {
   margin-bottom: 20px;
 }
 
-/* Test items styles */
 .test-items {
   display: flex;
   flex-direction: column;
@@ -158,7 +145,6 @@ body::before {
   cursor: pointer;
 }
 
-/* Button styles */
 .button-container {
   display: flex;
   justify-content: center;
@@ -202,14 +188,11 @@ body::before {
 }
 
 
-
-/* Results Page Specific Styles */
 .results-page {
   text-align: center;
 }
 
 .results-content {
-  /* padding: 20px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -220,7 +203,6 @@ body::before {
 .result-score {
   font-size: 32px;
   margin-bottom: 10px;
-  /* margin-top: -80px; */
 }
 
 .result-message {
@@ -234,49 +216,6 @@ body::before {
   justify-content: center;
   margin-top: 20px;
 }
-
-/* Modal styles
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-
-.modal {
-  background-color: #f9f3e3;
-  border: 2px solid rgba(146, 111, 56, 0.2);
-  border-radius: 8px;
-  padding: 20px;
-  max-width: 400px;
-  width: 90%;
-  text-align: center;
-}
-
-.modal-header {
-  margin-bottom: 20px;
-}
-
-.modal-header h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.score {
-  font-size: 36px;
-  font-weight: bold;
-}
-
-.modal-content p {
-  margin-bottom: 20px;
-} */
 
 
 
