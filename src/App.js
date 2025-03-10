@@ -29,18 +29,27 @@ function PurityTest() {
     });
   };
 
+  // const calculateScore = () => {
+  //   const totalQuestions = questions.length;
+  //   const checkedCount = Object.values(checkedItems).filter(value => value).length;
+  //   const purityScore = Math.round(((totalQuestions - checkedCount) / totalQuestions) * 100);
+
+  //   // Navigate to results page with the score
+  //   navigate('/results', { state: { score: purityScore } });
+  // };
+
   const calculateScore = () => {
-    const totalQuestions = questions.length;
+    // Count the number of checked items
     const checkedCount = Object.values(checkedItems).filter(value => value).length;
-    const purityScore = Math.round(((totalQuestions - checkedCount) / totalQuestions) * 100);
+
+    // Calculate purity score by subtracting checked count from 100
+    const purityScore = 100 - checkedCount;
 
     // Navigate to results page with the score
     navigate('/results', { state: { score: purityScore } });
   };
 
   const questions = [
-
-
     'Went to your O-week concert',
     'Had a dorm party get shut down',
     'Went to O-Hall for a meal',
@@ -142,17 +151,6 @@ function PurityTest() {
     'Won a case competition',
     'Got rejected from Waterloo Eng/CS or Mac Health Sci'
 
-
-
-
-
-
-
-
-
-
-
-
   ];
 
   return (
@@ -204,28 +202,45 @@ function PurityTest() {
 }
 
 // Results Page Component
+// function ResultsPage() {
+//   const navigate = useNavigate();
+//   const location = window.location;
+
+//   // Get score from the URL search params or use a default
+//   // In a real app, you would use useLocation from react-router-dom
+//   // This is a workaround for the artifact rendering
+//   const urlParams = new URLSearchParams(location.search);
+//   const scoreFromParams = urlParams.get('score');
+
+//   // Try to get score from state if available (this would work in a real app)
+//   const scoreFromState = location.state?.score;
+
+//   // Use the score from state or params, or default to 100
+//   const score = scoreFromState || scoreFromParams || 100;
+
 function ResultsPage() {
   const navigate = useNavigate();
+
+  // This is a workaround since we can't reliably use useLocation in this artifact rendering environment
   const location = window.location;
+  const searchParams = new URLSearchParams(location.search);
 
-  // Get score from the URL search params or use a default
-  // In a real app, you would use useLocation from react-router-dom
-  // This is a workaround for the artifact rendering
-  const urlParams = new URLSearchParams(location.search);
-  const scoreFromParams = urlParams.get('score');
+  // First try to get score from URL parameters (this will work when sharing links)
+  const scoreFromParams = searchParams.get('score');
 
-  // Try to get score from state if available (this would work in a real app)
-  const scoreFromState = location.state?.score;
+  // Then try to access the state if it exists (this will work during normal navigation)
+  // Need to check if history state has the state property from react-router
+  const historyState = window.history.state;
+  const scoreFromState = historyState && historyState.usr ? historyState.usr.score : null;
 
-  // Use the score from state or params, or default to 100
+  // Use score from either source, defaulting to 100 if neither is available
   const score = scoreFromState || scoreFromParams || 100;
-
   const getScoreMessage = (score) => {
     if (score >= 90) return "do you even leave your dorm???";
     if (score >= 70) return "wow you're a pretty respectable mustang. keep up the good work";
-    if (score >= 50) return "you've had your fair share of Waterloo experiences.";
-    if (score >= 30) return "hell nah you need help stop this";
-    return "You're a Waterloo legend! The geese bow to you.";
+    if (score >= 50) return "you've had your fair share of Western experiences.";
+    if (score >= 30) return "certified western vet";
+
   };
 
   const handleShareResult = async () => {
