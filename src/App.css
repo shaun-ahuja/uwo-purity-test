@@ -33,7 +33,7 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('https://www.transparenttextures.com/patterns/parchment.png');
+  background-image: "./uwoLogo.png";
   opacity: 0.05;
   pointer-events: none;
 }
@@ -146,31 +146,73 @@ body {
   background-color: #8b0000;
   color: white;
   border: none;
-  padding: 10px 30px;
-  font-size: 26px;
+  padding: 12px 20px;
+  font-size: 1.2em;
+  font-weight: 900;
   border-radius: 4px;
   cursor: pointer;
-  font-weight: 900;
-  transition: background-color 0.2s;
 }
-
-/* .calculate-button {
-  background-color: #8b0000;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1.2em;
-  cursor: pointer;
-  border-radius: 5px;
-  margin-bottom: 20px;
-} */
-
 
 .calculate-button:hover {
   background-color: #6b0000;
 }
 
-/* Modal styles */
+.share-button,
+.retake-button {
+  background-color: #8b0000;
+  color: white;
+  border: none;
+  padding: 5px 15px;
+  font-size: 19px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.2s;
+  margin-right: 1em;
+}
+
+
+.calculate-button:hover,
+.share-button:hover,
+.retake-button:hover {
+  background-color: #6b0000;
+}
+
+
+
+/* Results Page Specific Styles */
+.results-page {
+  text-align: center;
+}
+
+.results-content {
+  /* padding: 20px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+}
+
+.result-score {
+  font-size: 32px;
+  margin-bottom: 10px;
+  /* margin-top: -80px; */
+}
+
+.result-message {
+  font-size: 18px;
+  font-style: italic;
+  margin-bottom: 40px;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Modal styles
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -183,6 +225,7 @@ body {
   align-items: center;
   z-index: 1000;
 }
+
 
 .modal {
   background-color: #f9f3e3;
@@ -210,21 +253,9 @@ body {
 
 .modal-content p {
   margin-bottom: 20px;
-}
+} */
 
-.calculate-button {
-  background-color: #8b0000;
-  color: white;
-  border: none;
-  padding: 8px 20px;
-  font-size: 14px;
-  border-radius: 4px;
-  cursor: pointer;
-}
 
-.calculate-button:hover {
-  background-color: #6b0000;
-}
 
 /* Responsive styles */
 @media (max-width: 768px) {
