@@ -102,6 +102,23 @@ body {
   min-width: 20px;
 }
 
+.questions {
+  margin-bottom: 30px;
+}
+
+.question-item {
+  margin-bottom: 5px;
+  padding: 5px 0;
+  display: flex;
+}
+
+.question-number {
+  width: 30px;
+  text-align: right;
+  padding-right: 10px;
+  flex-shrink: 0;
+}
+
 .checkbox-container {
   display: flex;
   align-items: center;
@@ -130,12 +147,24 @@ body {
   color: white;
   border: none;
   padding: 10px 30px;
-  font-size: 16px;
+  font-size: 26px;
   border-radius: 4px;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 900;
   transition: background-color 0.2s;
 }
+
+/* .calculate-button {
+  background-color: #8b0000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 20px;
+} */
+
 
 .calculate-button:hover {
   background-color: #6b0000;
