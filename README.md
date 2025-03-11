@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# uwo-purity-test
-attempting to make a uwo rice purity test
 =======
 # Getting Started with Create React App
 
