@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Analytics } from "@vercel/analytics/react"
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import './App.css';
+import ReactGA from "react-ga4";
 
 // Main App Component
 function App() {
@@ -37,6 +38,15 @@ function PurityTest() {
 
     // Calculate purity score by subtracting checked count from 100
     const purityScore = 100 - checkedCount;
+
+
+    // Send an event to Google Analytics
+    ReactGA.event({
+      category: "Purity Test",
+      action: "Calculate Score",
+      label: "Score Calculation Executed",
+      value: purityScore, // Optionally track the score
+    });
 
     // Navigate to results page with the score
     navigate('/results', { state: { score: purityScore } });
