@@ -110,7 +110,7 @@ function PurityTest() {
     'Got attacked by a goose',
     'Didn’t go to the football game at HOCO',
     'Gone to the Spoke because the Tim Horton’s line was too long',
-    'Took a bus from Natural Science to Alumni Hall',
+    'Took a bus from Alumni Hall to Natural Science',
     'Have a shower in residence without wearing flip-flops',
     'Toboggan down UC hill when it snowed',
     'Have a bus drive by you because it’s full',
