@@ -231,36 +231,6 @@ function ResultsPage() {
 
   };
 
-  // const handleShareResult = async () => {
-  //   const title = "UWO Purity Test";
-  //   const url = `${window.location.origin}`;
-
-  //   // Check if the Web Share API is supported by the browser
-  //   if (navigator.share) {
-  //     try {
-  //       await navigator.share({
-  //         title,
-  //         url
-  //       });
-  //       console.log("Content shared successfully");
-  //     } 
-  //     catch (err) {
-  //       console.error("Error sharing: ", err);
-
-  //       // Fallback for when share is aborted or fails
-  //       alert("Couldn't share results. Try copying this link instead: " + url);
-  //     }
-  //   } else {
-  //     // Fallback for browsers that don't support the Web Share API
-  //     alert("Sharing not supported on this browser. Copy this link instead: " + url);
-
-  //     // Optional: Add clipboard copy functionality
-  //     navigator.clipboard.writeText(url)
-  //       .then(() => console.log("URL copied to clipboard"))
-  //       .catch(err => console.error("Could not copy URL: ", err));
-  //   }
-  // };
-
   const handleShareResult = async () => {
     const title = "UWO Purity Test";
     const url = `${window.location.origin}`;
@@ -274,10 +244,7 @@ function ResultsPage() {
         });
         console.log("Content shared successfully");
       } catch (err) {
-        // console.error("Error sharing: ", err);
 
-        // // Fallback for when share is aborted or fails
-        // alert("Couldn't share results. Try copying this link instead: " + url);
       }
     } else {
       // Fallback for browsers that don't support the Web Share API
