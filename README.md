@@ -50,7 +50,7 @@ The UWO Purity Test is a web application designed to allow students of the Unive
 
 ## Architecture
 
-![Architecture Diagram](https://github.com/user-attachments/assets/75adc7aa-7719-4c4f-a9bb-3ba847e12e9f)
+![Architecture Diagram](https://github.com/shaun-ahuja/uwo-purity-test/blob/main/public/purityArchitecture.png)
 
 The project is built using React and leverages the following technologies:
 
