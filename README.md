@@ -1,72 +1,100 @@
-=======
-# Getting Started with Create React App
+<div align="center">
+  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3 align="center">UWO Purity Test</h3>
 
-## Available Scripts
+  <p align="center">
+    A web app to gauge your "Mustang" level at the University of Western Ontario.
+    <br />
+     <a href="https://uwopuritytest.com">uwopuritytest.com</a>
+  </p>
+</div>
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Table of Contents
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#key-features">Key Features</a></li>
+      </ul>
+    </li>
+    <li><a href="#architecture">Architecture</a></li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+        <li><a href="#running-the-tests">Running the Tests</a></li>
+      </ul>
+    </li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-### `npm test`
+## About The Project
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The UWO Purity Test is a web application designed to allow students of the University of Western Ontario to reflect on and compare their experiences. It presents a series of questions about common UWO activities and calculates a "purity score" based on the number of activities a user has participated in.
 
-### `npm run build`
+### Key Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Interactive Questionnaire:** A list of questions related to UWO student life.
+- **Purity Score Calculation:** Calculates a score based on the number of checked items.
+- **Results Page:** Displays the calculated score and a corresponding message.
+- **Sharing Functionality:** Allows users to share their results via the Web Share API.
+- **Google Analytics Integration:** Tracks user interactions using Google Analytics 4.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Architecture
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Architecture Diagram](https://github.com/user-attachments/assets/75adc7aa-7719-4c4f-a9bb-3ba847e12e9f)
 
-### `npm run eject`
+The project is built using React and leverages the following technologies:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **React:** A JavaScript library for building user interfaces.
+- **React Router DOM:** For handling navigation between different pages (test and results).
+- **React GA4:** For integrating Google Analytics 4 to track user behavior.
+- **Vercel Analytics:** Integrated for website analytics.
+- **Create React App:** Used as the base for project setup and development.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Getting Started
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Prerequisites
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Node.js and npm installed on your machine.
 
-## Learn More
+### Installation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Instructions for setting up the project locally:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/shaun-ahuja/uwo-purity-test.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd uwo-purity-test
+   ```
+3. Install the dependencies:
+   ```sh
+   npm install
+   ```
+4. Start the development server:
+   ```sh
+   npm start
+   ```
+   This will start the app in development mode, and you can view it in your browser at `http://localhost:3000`.
 
-### Code Splitting
+### Running the Tests
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+To run the test suite:
 
-### Analyzing the Bundle Size
+```sh
+npm test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> 8d96f8d (Initialize project using Create React App)
+This will launch the test runner in interactive watch mode.
+```
